@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.6.2/tachyons.min.css">
+
+    <link rel="stylesheet" href="public/css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+    <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate/2.14.0/angular-translate.js"></script>
+    <script src="public/js/app.js"></script>
+
+  </head>
+  <body>
+    <div ng-controller="Ctrl" class="ph3 mw-100">
+
+      <div class="fr pv2" id="top">
+        <a ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN"></a> | <a ng-click="changeLanguage('jp')" translate="BUTTON_LANG_JP"></a>
+      </div>
+
+      <div class"fl pv2" id="main">
+        <h1>{{'HEADING' | translate}}</h1>
+        <p>{{'TEXT1' | translate}}</p>
+      </div>
+      <hr>
+      <div>
+        <p>{{'TEXT2' | translate}}</p>
+      </div>
+    </div>
+  </body>
+</html>
