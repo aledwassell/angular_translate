@@ -23,9 +23,9 @@ app.config(['$translateProvider', function ($translateProvider) {
   $translateProvider
     .translations('en', translationsEn)
     .translations('jp', translationsJp)
-  .registerAvailableLanguageKeys(['jp', 'en'], {
-    'jp_*': 'jp',
-    'en_*': 'en'
+    .registerAvailableLanguageKeys(['jp', 'en'], {
+      'jp_*': 'jp',
+      'en_*': 'en'
     })
     .determinePreferredLanguage()
 //     .preferredLanguage('jp')
