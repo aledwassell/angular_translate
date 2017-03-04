@@ -23,7 +23,12 @@ app.config(['$translateProvider', function ($translateProvider) {
   $translateProvider
     .translations('en', translationsEn)
     .translations('jp', translationsJp)
-    .preferredLanguage('jp')
+  .registerAvailableLanguageKeys(['jp', 'en'], {
+    'jp_*': 'jp',
+    'en_*': 'en'
+    })
+    .determinePreferredLanguage()
+//     .preferredLanguage('jp')
     .fallbackLanguage('jp');
 }]);
 
